@@ -50,7 +50,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 900px; /* Taille augmentée x3 (300px -> 900px) */
+      width: 900px;
       height: 900px;
       z-index: -1;
       opacity: 0.1;
@@ -174,6 +174,80 @@
       z-index: -1;
     }
     
+    /* Dify Chatbot Widget Styles */
+    #dify-chat-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .dify-toggle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .dify-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(110, 0, 255, 0.4);
+    }
+    
+    .dify-toggle i {
+      color: white;
+      font-size: 24px;
+    }
+    
+    .dify-container {
+      width: 350px;
+      height: 500px;
+      background: var(--primary-light);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: none;
+      flex-direction: column;
+      margin-top: 15px;
+      border: 1px solid rgba(110, 0, 255, 0.3);
+    }
+    
+    .dify-header {
+      background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .dify-header h3 {
+      color: white;
+      margin: 0;
+      font-weight: 600;
+    }
+    
+    .dify-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .dify-frame {
+      flex-grow: 1;
+      border: none;
+    }
+    
     @media (max-width: 768px) {
       .hero-title {
         font-size: 2.5rem;
@@ -181,6 +255,21 @@
       .ai-animation {
         width: 600px;
         height: 600px;
+      }
+      
+      #dify-chat-widget {
+        bottom: 20px;
+        right: 20px;
+      }
+      
+      .dify-container {
+        width: calc(100vw - 40px);
+        height: 70vh;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        left: 20px;
+        margin: 0 auto;
       }
     }
   </style>
@@ -190,7 +279,7 @@
   <div class="tech-bg"></div>
   <div class="tech-grid"></div>
   
-  <!-- Single AI Animation (size increased x3) -->
+  <!-- Single AI Animation -->
   <lottie-player 
     class="ai-animation" 
     src="https://assets10.lottiefiles.com/packages/lf20_vybwn7df.json" 
@@ -391,76 +480,76 @@
   </section>
 
   <!-- Contact Section -->
-<section id="contact" class="py-20">
-  <div class="container mx-auto px-6">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Contact Me</h2>
-        <p class="text-[#8892b0]">Let's discuss how I can help automate your business</p>
-      </div>
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Contact Me</h2>
+          <p class="text-[#8892b0]">Let's discuss how I can help automate your business</p>
+        </div>
 
-      <div class="bg-[#112240] p-8 rounded-xl border border-[#233554] shadow-xl">
-        <form action="https://formspree.io/f/xpwlpvab" method="POST">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block mb-2 text-white">Name</label>
-              <input
-                type="text"
-                name="name"
-                class="w-full bg-[#0a192f] border border-[#233554] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff]"
-                placeholder="Your name"
-                required
-              />
+        <div class="bg-[#112240] p-8 rounded-xl border border-[#233554] shadow-xl">
+          <form action="https://formspree.io/f/xpwlpvab" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block mb-2 text-white">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="w-full bg-[#0a192f] border border-[#233554] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff]"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="block mb-2 text-white">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="w-full bg-[#0a192f] border border-[#233554] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff]"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
             </div>
 
-            <div>
-              <label class="block mb-2 text-white">Email</label>
-              <input
-                type="email"
-                name="email"
+            <div class="mt-6">
+              <label class="block mb-2 text-white">Message</label>
+              <textarea
+                name="message"
+                rows="4"
                 class="w-full bg-[#0a192f] border border-[#233554] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff]"
-                placeholder="your@email.com"
+                placeholder="How can I help you?"
                 required
-              />
+              ></textarea>
             </div>
-          </div>
 
-          <div class="mt-6">
-            <label class="block mb-2 text-white">Message</label>
-            <textarea
-              name="message"
-              rows="4"
-              class="w-full bg-[#0a192f] border border-[#233554] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff]"
-              placeholder="How can I help you?"
-              required
-            ></textarea>
-          </div>
+            <button
+              type="submit"
+              class="btn-gradient w-full text-white py-3 mt-6 rounded-lg font-medium text-lg"
+            >
+              Send Message
+            </button>
+          </form>
 
-          <button
-            type="submit"
-            class="btn-gradient w-full text-white py-3 mt-6 rounded-lg font-medium text-lg"
-          >
-            Send Message
-          </button>
-        </form>
-
-        <div class="mt-8 pt-8 border-t border-[#233554]">
-          <div class="flex flex-col items-center">
-            <p class="text-[#8892b0] mb-4">Or contact me directly</p>
-            <div class="flex space-x-6">
-              <a href="mailto:willgigan244@gmail.com" class="text-[#8892b0] hover:text-[#00d1ff] transition-colors text-2xl">
-                <i class="fas fa-envelope"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/will-gigan-639721376/" target="_blank" class="text-[#8892b0] hover:text-[#00d1ff] transition-colors text-2xl">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+          <div class="mt-8 pt-8 border-t border-[#233554]">
+            <div class="flex flex-col items-center">
+              <p class="text-[#8892b0] mb-4">Or contact me directly</p>
+              <div class="flex space-x-6">
+                <a href="mailto:willgigan244@gmail.com" class="text-[#8892b0] hover:text-[#00d1ff] transition-colors text-2xl">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/will-gigan-639721376/" target="_blank" class="text-[#8892b0] hover:text-[#00d1ff] transition-colors text-2xl">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="py-12 text-center border-t border-[#233554]">
@@ -475,6 +564,26 @@
     </div>
   </footer>
 
+  <!-- Dify Chat Widget -->
+  <div id="dify-chat-widget">
+    <div class="dify-toggle" id="dify-toggle">
+      <i class="fas fa-robot"></i>
+    </div>
+    <div class="dify-container" id="dify-container">
+      <div class="dify-header">
+        <h3>AI Assistant</h3>
+        <button class="dify-close" id="dify-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <iframe 
+        class="dify-frame"
+        src="https://udify.app/chatbot/fnV5Nh3341stcjnN" 
+        allow="microphone">
+      </iframe>
+    </div>
+  </div>
+
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -488,18 +597,32 @@
         });
       });
     });
+    
+    // Dify Chat Widget Functionality
+    const difyToggle = document.getElementById('dify-toggle');
+    const difyContainer = document.getElementById('dify-container');
+    const difyClose = document.getElementById('dify-close');
+    
+    difyToggle.addEventListener('click', () => {
+      difyContainer.style.display = 'flex';
+    });
+    
+    difyClose.addEventListener('click', () => {
+      difyContainer.style.display = 'none';
+    });
+    
+    // Close chat when clicking outside
+    document.addEventListener('click', (e) => {
+      const isClickInside = difyContainer.contains(e.target) || difyToggle.contains(e.target);
+      
+      if (!isClickInside && difyContainer.style.display === 'flex') {
+        difyContainer.style.display = 'none';
+      }
+    });
+    
+    // Log to console for verification
+    console.log("Dify chatbot widget successfully loaded");
+    console.log("Chatbot URL: https://udify.app/chatbot/fnV5Nh3341stcjnN");
   </script>
-  <!-- Dify Chat Widget -->
-<script
-  src="https://udify.app/embed.min.js"
-  data-app-id="e40f5101-c941-455f-b158-4d7e5c8035a1"
-  defer>
-</script>
-<iframe
- src="https://udify.app/chatbot/fnV5Nh3341stcjnN"
- style="width: 100%; height: 100%; min-height: 700px"
- frameborder="0"
- allow="microphone">
-</iframe>
 </body>
 </html>

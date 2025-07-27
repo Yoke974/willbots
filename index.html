@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
   <style>
+<<<<<<< HEAD
     /* ... (le reste de vos styles CSS reste inchangé) ... */
 
     /* Nouveaux styles pour le chatbot personnalisé */
@@ -64,6 +65,181 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
+=======
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+    
+    :root {
+      --primary-dark: #0a192f;
+      --primary-light: #112240;
+      --accent-purple: #6e00ff;
+      --accent-cyan: #00d1ff;
+      --accent-pink: #ff00ff;
+      --text-light: #e6f1ff;
+      --text-gray: #8892b0;
+    }
+    
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background-color: var(--primary-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .tech-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.15;
+      background: 
+        radial-gradient(circle at 20% 30%, var(--accent-purple) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, var(--accent-cyan) 0%, transparent 40%),
+        linear-gradient(to bottom, var(--primary-dark), transparent);
+      overflow: hidden;
+    }
+    
+    .ai-animation {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px; /* Taille augmentée x3 (300px -> 900px) */
+      height: 900px;
+      z-index: -1;
+      opacity: 0.1;
+    }
+    
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .hero-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--accent-cyan);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .card-glow {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-glow:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(110, 0, 255, 0.25), 0 10px 10px -5px rgba(0, 209, 255, 0.1);
+    }
+    
+    .btn-gradient {
+      background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-gradient:hover::before {
+      left: 100%;
+    }
+    
+    .linkedin-container {
+      background: rgba(17, 34, 64, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(110, 0, 255, 0.2);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .icon-container {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      background: rgba(110, 0, 255, 0.1);
+      border: 1px solid rgba(110, 0, 255, 0.3);
+    }
+    
+    .icon-container i {
+      font-size: 30px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-cyan);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .tech-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(10, 25, 47, 0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 25, 47, 0.8) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.1;
+      z-index: -1;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .ai-animation {
+        width: 600px;
+        height: 600px;
+      }
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
     }
   </style>
 </head>
@@ -72,7 +248,11 @@
   <div class="tech-bg"></div>
   <div class="tech-grid"></div>
   
+<<<<<<< HEAD
   <!-- Single AI Animation -->
+=======
+  <!-- Single AI Animation (size increased x3) -->
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
   <lottie-player 
     class="ai-animation" 
     src="https://assets10.lottiefiles.com/packages/lf20_vybwn7df.json" 
@@ -280,12 +460,21 @@
           <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Contact Me</h2>
           <p class="text-[#8892b0]">Let's discuss how I can help automate your business</p>
         </div>
+<<<<<<< HEAD
 
         <div class="bg-[#112240] p-8 rounded-xl border border-[#233554] shadow-xl">
           <form action="https://formspree.io/f/xpwlpvab" method="POST">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label class="block mb-2 text-white">Name</label>
+=======
+        
+        <div class="bg-[#112240] p-8 rounded-xl border border-[#233554] shadow-xl">
+          <form class="space-y-6" action="https://formspree.io/f/willgigan244@gmail.com" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block mb-2">Name</label>
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
                 <input
                   type="text"
                   name="name"
@@ -294,9 +483,15 @@
                   required
                 />
               </div>
+<<<<<<< HEAD
 
               <div>
                 <label class="block mb-2 text-white">Email</label>
+=======
+              
+              <div>
+                <label class="block mb-2">Email</label>
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
                 <input
                   type="email"
                   name="email"
@@ -306,9 +501,15 @@
                 />
               </div>
             </div>
+<<<<<<< HEAD
 
             <div class="mt-6">
               <label class="block mb-2 text-white">Message</label>
+=======
+            
+            <div>
+              <label class="block mb-2">Message</label>
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
               <textarea
                 name="message"
                 rows="4"
@@ -317,15 +518,26 @@
                 required
               ></textarea>
             </div>
+<<<<<<< HEAD
 
             <button
               type="submit"
               class="btn-gradient w-full text-white py-3 mt-6 rounded-lg font-medium text-lg"
+=======
+            
+            <button
+              type="submit"
+              class="btn-gradient w-full text-white py-3 rounded-lg font-medium text-lg"
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
             >
               Send Message
             </button>
           </form>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
           <div class="mt-8 pt-8 border-t border-[#233554]">
             <div class="flex flex-col items-center">
               <p class="text-[#8892b0] mb-4">Or contact me directly</p>
@@ -357,6 +569,7 @@
     </div>
   </footer>
 
+<<<<<<< HEAD
   <!-- Dify Chat Widget - Version personnalisée -->
   <div id="dify-chat-widget">
     <div class="dify-toggle" id="dify-toggle">
@@ -395,6 +608,8 @@
     </div>
   </div>
 
+=======
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -408,6 +623,7 @@
         });
       });
     });
+<<<<<<< HEAD
     
     // Dify Chat Widget Functionality
     const difyToggle = document.getElementById('dify-toggle');
@@ -539,6 +755,8 @@
     
     // Initialisation du chatbot
     console.log("Chatbot Willbots initialisé");
+=======
+>>>>>>> 89fd46289b445fe7a9e0d870046dba6a8f57e4de
   </script>
 </body>
 </html>

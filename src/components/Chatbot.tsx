@@ -12,7 +12,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'bot',
-      content: "Hello! I'm your Willbots AI assistant 🤖\nHow can I help you today?\n\nExamples: Automation, n8n, Web Scraping..."
+      content: "Hello! 👋 I'm Willbots' assistant.\nTell me briefly what could save you time today:\n\n• Task automation?\n• Data extraction?\n• A website + AI chatbot?"
     }
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -35,27 +35,31 @@ const Chatbot = () => {
     }
   }, [isOpen]);
 
-  // Fallback responses for common questions
+  // Fallback responses aligned with new prompt
   const getFallbackResponse = (message: string) => {
     const lowerMessage = message.toLowerCase();
     
+    if (lowerMessage.includes('automation') || lowerMessage.includes('automate')) {
+      return "Perfect! Will specializes in automation with n8n, Make, and Zapier.\n\n✅ Save 10h/week automating emails, invoices & reporting\n✅ Connect your apps seamlessly\n✅ Custom workflows for your business\n\nWhat specific task would you like to automate?";
+    }
+    
+    if (lowerMessage.includes('data') || lowerMessage.includes('scraping') || lowerMessage.includes('extraction')) {
+      return "Great choice! We extract data from:\n\n✅ Google Maps & directories\n✅ Public databases & websites\n✅ APIs & custom sources\n✅ Real-time monitoring\n\nWhat type of data do you need collected?";
+    }
+    
+    if (lowerMessage.includes('website') || lowerMessage.includes('web') || lowerMessage.includes('chatbot')) {
+      return "Excellent! We build complete websites with:\n\n✅ Portfolio, e-commerce & landing pages\n✅ Custom AI chatbots (like this one!)\n✅ 24/7 automated customer support\n✅ Dify integration for smart replies\n\nNeed a website, chatbot, or both?";
+    }
+    
     if (lowerMessage.includes('n8n')) {
-      return "n8n is a powerful workflow automation tool! I can help you with:\n\n• Setting up automated workflows\n• Connecting different apps and services\n• Creating custom integrations\n• Data processing and transformation\n\nWould you like to know more about a specific aspect?";
-    }
-    
-    if (lowerMessage.includes('automation') || lowerMessage.includes('workflow')) {
-      return "Workflow automation can transform your business! Here's what I can help with:\n\n• Process automation\n• Data collection and processing\n• Email and notification systems\n• API integrations\n• Custom business logic\n\nWhat type of automation interests you?";
-    }
-    
-    if (lowerMessage.includes('scraping') || lowerMessage.includes('web scraping')) {
-      return "Web scraping is essential for data collection! I can help you with:\n\n• Extracting data from websites\n• Structured data processing\n• Automated data collection\n• Integration with databases\n• Real-time data monitoring\n\nWhat kind of data do you need to collect?";
+      return "n8n expert here! Will can help you:\n\n✅ Build powerful automation workflows\n✅ Connect 200+ apps and services\n✅ Save hours with custom integrations\n✅ Process data automatically\n\nWhat's your automation goal?";
     }
     
     if (lowerMessage.includes('api') || lowerMessage.includes('integration')) {
-      return "API integrations connect your systems! I can help with:\n\n• REST API connections\n• Webhook implementations\n• Data synchronization\n• Custom API development\n• Third-party service integration\n\nWhich service would you like to integrate?";
+      return "API integrations are our specialty!\n\n✅ Connect any service or platform\n✅ Custom API development\n✅ Real-time data synchronization\n✅ Webhook implementations\n\nWhich systems need connecting?";
     }
     
-    return "I'm here to help with automation, n8n workflows, web scraping, and API integrations! What would you like to know more about?";
+    return "I help businesses save time with:\n\n✅ Task automation (emails, reports, workflows)\n✅ Data extraction (Google Maps, databases)\n✅ Website + AI chatbot development\n\nWhich area interests you most?";
   };
 
   const sendMessage = async () => {
@@ -78,7 +82,9 @@ const Chatbot = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          inputs: {},
+          inputs: {
+            system_prompt: "You are the AI assistant for Willbots (www.willbots.shop), specializing in automation, API integration, AI, and web development.\n\n🎯 Your Mission:\nWelcome visitors and identify their needs in 1-2 questions max.\nOffer tailored solutions with clear benefits.\nHighlight Will Gigan's expertise in:\n• Automation (n8n, Make, Zapier)\n• Web Scraping (Google Maps, directories, public databases)\n• Full Website Development (with customizable AI chatbots)\n\n✨ Key Services:\n✅ Automation (emails, invoices, reporting)\n✅ Data Extraction (scraping, APIs, public databases)\n✅ Website Development (portfolio, e-commerce, landing pages)\n✅ Custom AI Chatbots (Dify integration, automated replies, 24/7 customer support)\n\n🗣 Response Style:\n• Professional yet simple\n• Concise (3-5 lines max)\n• Results-driven (e.g., \"Save 10h/week by automating emails\")"
+          },
           query: userMessage,
           response_mode: "blocking",
           conversation_id: conversationId
@@ -155,7 +161,7 @@ const Chatbot = () => {
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-[#233554]">
-              <h3 className="text-lg font-bold text-white">AI Assistant</h3>
+              <h3 className="text-lg font-bold text-white">Willbots Assistant</h3>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-[#8892b0] hover:text-white transition-colors"

@@ -1,3 +1,5 @@
+'use client';
+
 const Hero = () => (
   <>
     <section className="min-h-screen flex items-center relative pt-16">

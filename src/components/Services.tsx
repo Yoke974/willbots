@@ -70,7 +70,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="card-glow bg-[#334155] p-8 rounded-xl border border-[#475569]"
+              className="card-glow bg-[#1a1f2e] p-8 rounded-xl border border-[#00d4ff]/20"
               variants={itemVariants}
               whileHover={{ 
                 y: -10,

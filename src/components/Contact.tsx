@@ -55,7 +55,7 @@ const Contact = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#334155] p-8 rounded-xl border border-[#475569] shadow-xl"
+            className="bg-[#1a1f2e] p-8 rounded-xl border border-[#00d4ff]/20 shadow-xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -68,7 +68,7 @@ const Contact = () => {
                   <input
                     type="text"
                     name="name"
-                    className="w-full bg-[#1E293B] border border-[#475569] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] text-white"
+                    className="w-full bg-[#0a0f1c] border border-[#00d4ff]/30 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d4ff] text-white"
                     placeholder="Your name"
                     required
                   />
@@ -79,7 +79,7 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
-                    className="w-full bg-[#1E293B] border border-[#475569] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] text-white"
+                    className="w-full bg-[#0a0f1c] border border-[#00d4ff]/30 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d4ff] text-white"
                     placeholder="your@email.com"
                     required
                   />
@@ -91,7 +91,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   rows={4}
-                  className="w-full bg-[#1E293B] border border-[#475569] rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] text-white"
+                  className="w-full bg-[#0a0f1c] border border-[#00d4ff]/30 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d4ff] text-white"
                   placeholder="How can I help you?"
                   required
                 ></textarea>
@@ -126,14 +126,14 @@ const Contact = () => {
               )}
             </form>
             
-            <div className="mt-8 pt-8 border-t border-[#475569]">
+            <div className="mt-8 pt-8 border-t border-[#00d4ff]/20">
               <div className="flex flex-col items-center">
                 <p className="text-[#8892b0] mb-4">Or contact me directly</p>
                 <div className="flex space-x-6">
-                  <a href="mailto:willgigan244@gmail.com" className="text-[#8892b0] hover:text-[#3B82F6] transition-colors text-2xl">
+                  <a href="mailto:willgigan244@gmail.com" className="text-[#8892b0] hover:text-[#00d4ff] transition-colors text-2xl">
                     <i className="fas fa-envelope"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/will-gigan-639721376/" target="_blank" className="text-[#8892b0] hover:text-[#3B82F6] transition-colors text-2xl">
+                  <a href="https://www.linkedin.com/in/will-gigan-639721376/" target="_blank" className="text-[#8892b0] hover:text-[#00d4ff] transition-colors text-2xl">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </div>

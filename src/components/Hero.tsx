@@ -21,7 +21,7 @@ const Hero = () => (
             <a href="#contact" className="btn-gradient px-8 py-4 rounded-full font-medium text-lg text-white">
               <i className="fas fa-paper-plane mr-2"></i> Get in Touch
             </a>
-            <a href="#services" className="px-8 py-4 rounded-full font-medium text-lg border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6]/10 transition-colors">
+            <a href="#services" className="px-8 py-4 rounded-full font-medium text-lg border border-[#00d4ff] text-[#00d4ff] hover:bg-[#00d4ff]/10 transition-colors">
               <i className="fas fa-cogs mr-2"></i> Explore Services
             </a>
           </div>
@@ -56,30 +56,39 @@ const Hero = () => (
             </div>
             
             <div className="proof-images">
-              <img 
-                src="/images/whatsapp-notifications.webp" 
-                alt="WhatsApp automated notifications showing transport alerts" 
-                loading="lazy"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23334155'/%3E%3Ctext x='150' y='100' text-anchor='middle' fill='%23F8FAFC' font-size='14'%3EWhatsApp Notifications%3C/text%3E%3C/svg%3E";
-                }}
-              />
-              <img 
-                src="/images/n8n-workflow.webp" 
-                alt="N8N automation workflow with AI and WhatsApp integration" 
-                loading="lazy"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23334155'/%3E%3Ctext x='150' y='100' text-anchor='middle' fill='%23F8FAFC' font-size='14'%3EN8N Workflow%3C/text%3E%3C/svg%3E";
-                }}
-              />
-              <img 
-                src="/images/mcp-server.webp" 
-                alt="MCP Server dashboard showing organized workflows and automations" 
-                loading="lazy"
-                onError={(e) => {
-                  e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23334155'/%3E%3Ctext x='150' y='100' text-anchor='middle' fill='%23F8FAFC' font-size='14'%3EMCP Server%3C/text%3E%3C/svg%3E";
-                }}
-              />
+              <div className="relative">
+                <img 
+                  src="/images/whatsapp-notifications.webp" 
+                  alt="WhatsApp automated notifications showing transport alerts" 
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%231a1f2e'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%2300d4ff' font-size='12' font-family='Arial'%3EWhatsApp%3C/text%3E%3Ctext x='150' y='110' text-anchor='middle' fill='%23F8FAFC' font-size='10' font-family='Arial'%3ENotifications%3C/text%3E%3C/svg%3E";
+                  }}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              <div className="relative">
+                <img 
+                  src="/images/n8n-workflow.webp" 
+                  alt="N8N automation workflow with AI and WhatsApp integration" 
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%231a1f2e'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%2300d4ff' font-size='14' font-family='Arial'%3EN8N%3C/text%3E%3Ctext x='150' y='110' text-anchor='middle' fill='%23F8FAFC' font-size='10' font-family='Arial'%3EWorkflow%3C/text%3E%3C/svg%3E";
+                  }}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              <div className="relative">
+                <img 
+                  src="/images/mcp-server.webp" 
+                  alt="MCP Server dashboard showing organized workflows and automations" 
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%231a1f2e'/%3E%3Ctext x='150' y='90' text-anchor='middle' fill='%2300d4ff' font-size='12' font-family='Arial'%3EMCP Server%3C/text%3E%3Ctext x='150' y='110' text-anchor='middle' fill='%23F8FAFC' font-size='10' font-family='Arial'%3EDashboard%3C/text%3E%3C/svg%3E";
+                  }}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>

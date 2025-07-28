@@ -8,7 +8,7 @@ const LinkedInPost = () => (
         </div>
         <div className="linkedin-container p-6">
           <div className="flex items-start mb-6">
-            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#3B82F6]">
+            <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#00d4ff]">
               <img src="https://media.licdn.com/dms/image/D4E03AQHdK8vJvSXmJQ/profile-displayphoto-shrink_400_400/0/1709661841312?e=1723075200&v=beta&t=GvzFhWk4JxJgHjQdU9uG7UxQJ6VbQx0Z9X0l0Z0Qj0Y" alt="Will Gigan" className="w-full h-full object-cover" />
             </div>
             <div className="ml-4">
@@ -32,13 +32,13 @@ const LinkedInPost = () => (
               <p className="mt-4">The result? Increased productivity, reduced errors, and more time for strategic thinking.</p>
             </div>
           </div>
-          <div className="flex items-center justify-between pt-4 border-t border-[#475569]">
+          <div className="flex items-center justify-between pt-4 border-t border-[#00d4ff]/20">
             <div className="flex space-x-4 text-[#8892b0]">
               <span><i className="far fa-heart mr-1"></i> 42</span>
               <span><i className="far fa-comment mr-1"></i> 8</span>
               <span><i className="far fa-share-square mr-1"></i> 12</span>
             </div>
-            <a href="https://www.linkedin.com/posts/will-gigan-639721376_automation-n8n-openai-activity-7353847833554284545-iSAi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF0C4E0BAs-92KguN0lY0orNqxQitbRL_2E" target="_blank" className="text-[#3B82F6] hover:text-[#FF4D4D] transition-colors">
+            <a href="https://www.linkedin.com/posts/will-gigan-639721376_automation-n8n-openai-activity-7353847833554284545-iSAi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF0C4E0BAs-92KguN0lY0orNqxQitbRL_2E" target="_blank" className="text-[#00d4ff] hover:text-[#ff00ff] transition-colors">
               Read full post on LinkedIn <i className="fas fa-external-link-alt ml-2"></i>
             </a>
           </div>

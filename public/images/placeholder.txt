@@ -1,0 +1,9 @@
+# Images Folder
+
+Ce dossier contient les images pour la section témoignage :
+
+- whatsapp-notifications.webp : Notifications WhatsApp automatiques
+- n8n-workflow.webp : Workflow N8N avec intégration IA
+- mcp-server.webp : Dashboard MCP Server
+
+Les images seront converties au format WebP pour optimiser les performances. 

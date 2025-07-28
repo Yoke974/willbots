@@ -141,7 +141,7 @@ const Chatbot = () => {
       >
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-16 h-16 bg-gradient-to-r from-[#6e00ff] to-[#00d1ff] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
+          className="w-16 h-16 bg-gradient-to-r from-[#3B82F6] to-[#FF4D4D] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -153,14 +153,14 @@ const Chatbot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-[#112240] rounded-xl border border-[#233554] shadow-2xl flex flex-col"
+            className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-[#334155] rounded-xl border border-[#475569] shadow-2xl flex flex-col"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-[#233554]">
+            <div className="flex items-center justify-between p-4 border-b border-[#475569]">
               <h3 className="text-lg font-bold text-white">Willbots Assistant</h3>
               <button
                 onClick={() => setIsOpen(false)}
@@ -183,8 +183,8 @@ const Chatbot = () => {
                   <div
                     className={`max-w-[80%] p-3 rounded-lg ${
                       message.role === 'user'
-                        ? 'bg-[#00d1ff]/20 text-white rounded-br-sm'
-                        : 'bg-[#6e00ff]/20 text-white rounded-bl-sm'
+                        ? 'bg-[#3B82F6]/20 text-white rounded-br-sm'
+                        : 'bg-[#FF4D4D]/20 text-white rounded-bl-sm'
                     }`}
                   >
                     <div className="whitespace-pre-wrap">{message.content}</div>
@@ -199,12 +199,12 @@ const Chatbot = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
-                  <div className="bg-[#6e00ff]/20 text-white rounded-lg rounded-bl-sm p-3">
+                  <div className="bg-[#FF4D4D]/20 text-white rounded-lg rounded-bl-sm p-3">
                     <div className="flex items-center space-x-2">
                       <div className="flex space-x-1">
-                        <div className="w-2 h-2 bg-[#00d1ff] rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-[#00d1ff] rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-[#00d1ff] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-2 h-2 bg-[#3B82F6] rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-[#3B82F6] rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-2 h-2 bg-[#3B82F6] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
                       <span className="text-sm">Willbots is typing...</span>
                     </div>
@@ -215,7 +215,7 @@ const Chatbot = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-[#233554]">
+            <div className="p-4 border-t border-[#475569]">
               <div className="flex">
                 <input
                   ref={inputRef}
@@ -224,13 +224,13 @@ const Chatbot = () => {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask me anything..."
-                  className="flex-1 bg-[#0a192f] border border-[#233554] rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#00d1ff] text-white"
+                  className="flex-1 bg-[#1E293B] border border-[#475569] rounded-l-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#3B82F6] text-white"
                   disabled={isTyping}
                 />
                 <button
                   onClick={sendMessage}
                   disabled={!inputValue.trim() || isTyping}
-                  className="bg-[#6e00ff] text-white px-4 rounded-r-lg font-medium hover:bg-[#00d1ff] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[#FF4D4D] text-white px-4 rounded-r-lg font-medium hover:bg-[#3B82F6] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <i className="fas fa-paper-plane"></i>
                 </button>

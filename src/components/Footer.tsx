@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="py-12 text-center border-t border-[#233554]">
+    <footer className="py-12 text-center border-t border-[#475569]">
       <div className="container mx-auto px-6">
         <motion.div 
           className="flex justify-center mb-6"
@@ -13,7 +13,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <div className="text-2xl font-bold">
-            <span className="text-[#00d1ff]">Will</span> <span className="text-white">Gigan</span>
+            <span className="text-[#3B82F6]">Will</span> <span className="text-white">Gigan</span>
           </div>
         </motion.div>
         <motion.p 

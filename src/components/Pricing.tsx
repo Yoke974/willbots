@@ -18,7 +18,7 @@ const Pricing = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-[#112240] p-8 rounded-xl border border-[#233554] shadow-xl"
+            className="bg-[#334155] p-8 rounded-xl border border-[#475569] shadow-xl"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -37,11 +37,11 @@ const Pricing = () => {
               
               <div className="flex flex-col items-center">
                 <div className="flex items-center mb-4">
-                  <i className="fas fa-laptop-house text-[#00d1ff] text-xl mr-2"></i>
+                  <i className="fas fa-laptop-house text-[#3B82F6] text-xl mr-2"></i>
                   <span>Remote Work</span>
                 </div>
                 <div className="flex items-center">
-                  <i className="fas fa-calendar-check text-[#6e00ff] text-xl mr-2"></i>
+                  <i className="fas fa-calendar-check text-[#FF4D4D] text-xl mr-2"></i>
                   <span>Flexible Availability</span>
                 </div>
               </div>
